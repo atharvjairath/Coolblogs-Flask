@@ -1,4 +1,4 @@
-{% extends "layout.html"%}
+{% extends "layout.html" %}
 {% block container %}
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-1.jpg') }}')">
@@ -30,7 +30,7 @@
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Admin</a>
+            <a href="https://medium.com/@atharv.jairath/automate-your-instagram-selenium-361c1eaf17fe" target="_blank">Atharv Jairath</a>
             on {{post.date}}</p>
         </div>
 
@@ -41,11 +41,16 @@
 
         <!-- Pager -->
         <div class="clearfix">
-          {% if number!=0%}
-          <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous Posts →</a>
-          {%endif%}
-          <a class="btn btn-primary float-right" href="{{next}}">Newer Posts &larr;</a>
 
+
+          {% if prev!='#' and next!='#' %}
+          <a class="btn btn-primary float-left " href="{{prev}}">&larr; Previous Posts</a>
+          <a class="btn btn-primary float-right" href="{{next}}">Newer Posts &rarr;</a>
+          {% elif prev!='#' %}
+          <a class="btn btn-primary float-left " href="{{prev}}">&larr; Previous Posts</a>
+          {% else  %}
+          <a class="btn btn-primary float-right" href="{{next}}">Newer Posts &rarr;</a>
+         {% endif %}
         </div>
       </div>
     </div>

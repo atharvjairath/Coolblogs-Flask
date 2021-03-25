@@ -55,6 +55,7 @@ class Posts(db.Model):
 def home():
     posts = Posts.query.filter_by().all()
     last = math.ceil(len(posts)/int(params['no_of_posts']))
+    print(last,"last")
     page = request.args.get('page')
     if(not str(page).isnumeric()):
         page = 1
