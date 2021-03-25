@@ -1,0 +1,16 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:@localhost/Coolblogs",
+        "prod_uri":"mysql+pymysql://root:@localhost/Coolblogs",
+        "gmail-user":"atharv.jairath@gmail.com",
+        "gmail-password":"euro atharv",
+        "admin_user":"atharvjairath",
+        "admin_pass":"coolblogs123",
+        "upload_location":"/Users/atharvjairath/Desktop/Flask-blog-app/static",
+        "no_of_posts":"3"
+
+
+    }
+}
